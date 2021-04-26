@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="book1" class="library.entities.Book">
+        <property name="name" value="Black Swan"/>
+        <property name="author" ref="author1"/>
+    </bean>
+    <bean id="book2" class="library.entities.Book">
+        <property name="name" value="Old Man and the Sea"/>
+        <property name="author" ref="author2"/>
+    </bean>
+
+    <bean id="author1" class="library.entities.Author">
+        <property name="firstName" value="Nasim"/>
+        <property name="lastName" value="Taleb"/>
+        <property name="books">
+            <list>
+                <ref bean="book1"/>
+            </list>
+        </property>
+    </bean>
+    <bean id="author2" class="library.entities.Author">
+        <property name="firstName" value="Ernest"/>
+        <property name="lastName" value="Hemingway"/>
+        <property name="books">
+            <list>
+                <ref bean="book2"/>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="library" class="library.entities.Library">
+        <property name="name" value="Central District library"/>
+        <property name="city" value="Zhytomyr"/>
+        <property name="books">
+            <list>
+                <ref bean="book1"/>
+                <ref bean="book2"/>
+            </list>
+        </property>
+        <property name="authors">
+            <list>
+                <ref bean="author1"/>
+                <ref bean="author2"/>
+            </list>
+        </property>
+    </bean>
+
+
+</beans>
