@@ -2,29 +2,30 @@ package library.entities;
 
 public class Book {
     private String name;
-    private Author author;
+    private long authorId;
+
 
     public String getName() {
         return name;
     }
 
-   /* @Override*/
-   /* public String toString() {*/
-   /*     return "Book{" +*/
-   /*             "name='" + name + '\'' +*/
-   /*             ", author=" + author +*/
-   /*             '}';*/
-   /* }*/
-
-    public Author getAuthor() {
-        return author;
+    @Override
+    public String toString() {
+        return "Book{" +
+                "name='" + name + '\'' +
+                ", authorId=" + authorId +
+                '}';
     }
 
     public void setName(String name) {
         this.name = name;
     }
 
-    public void setAuthor(Author author) {
-        this.author = author;
+    public long getAuthorId() {
+        return authorId;
+    }
+
+    public void setAuthorId(long authorId) {
+        this.authorId = authorId;
     }
 }

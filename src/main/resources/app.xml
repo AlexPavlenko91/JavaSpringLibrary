@@ -5,11 +5,11 @@
 
     <bean id="book1" class="library.entities.Book">
         <property name="name" value="Black Swan"/>
-        <property name="author" ref="author1"/>
+        <property name="authorId" value="1"/>
     </bean>
     <bean id="book2" class="library.entities.Book">
         <property name="name" value="Old Man and the Sea"/>
-        <property name="author" ref="author2"/>
+        <property name="authorId" value="2"/>
     </bean>
 
     <bean id="author1" class="library.entities.Author">
